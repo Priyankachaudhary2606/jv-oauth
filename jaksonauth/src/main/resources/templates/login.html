@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Link your account</h1>
+	<form action="http://localhost:8080/oauth/authorize" method="post">
+		<label>Enter Employee Id</label>
+                 <input type="text" name="response_type" value="code" /> 
+                 <input type="text" name="client_id" value="clientapp" />
+                 <input type="text" name="redirect_uri" value="https://oauth-redirect.googleusercontent.com/r/jakson-voice" />
+                 <input type="text" name="scope" value="read" /> 
+                 <input type="text" name="secret" value="read" /> 
+                 <input type="text" name="scope" value="read" /> 
+                 <input type="SUBMIT" value="Get Employee info" />
+	
+	</form>
+</body>
+</html>
