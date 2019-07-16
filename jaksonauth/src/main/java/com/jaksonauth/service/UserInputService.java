@@ -24,7 +24,7 @@ public class UserInputService implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		System.out.println(username);
-		UserDetailsDto userInfo = new UserDetailsDto(username, new BCryptPasswordEncoder().encode("password"), "USER");
+		UserDetailsDto userInfo = new UserDetailsDto(username, new BCryptPasswordEncoder().encode("jakson123"), "USER");
 		System.out.print(userInfo.getUsername()+ userInfo.getPassword());
 		GrantedAuthority authority = new SimpleGrantedAuthority("USER");
 		return new User(userInfo.getUsername(), userInfo.getPassword(), Arrays.asList(authority));

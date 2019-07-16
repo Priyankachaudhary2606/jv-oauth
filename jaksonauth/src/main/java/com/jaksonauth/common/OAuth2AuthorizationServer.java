@@ -1,6 +1,6 @@
 package com.jaksonauth.common;
 
-import javax.sql.DataSource;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

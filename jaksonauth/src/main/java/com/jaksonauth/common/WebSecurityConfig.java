@@ -24,12 +24,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
         http.requestMatchers()
-          .antMatchers("/login", "/oauth/authorize","/resources/**")
+          .antMatchers("/login", "/oauth/authorize","/resources/**", "/css/**", "/js/**")
           .and()
           .authorizeRequests()
           .anyRequest().authenticated()
           .and()
           .formLogin().permitAll();
+
     }
 	
 	@Bean

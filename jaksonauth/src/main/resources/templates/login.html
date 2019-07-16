@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+
+</style>
+
+<script>
+	$(document).ready(function(){
+		$('#loginTab').click(function(){
+			$('#loginForm').css({
+				"display":"block"
+			});
+			
+			$('#signupForm').css({
+				"display":"none"
+			});
+		});
+		
+		$('#signupTab').click(function(){
+			$('#loginForm').css({
+				"display":"none"
+			});
+			
+			$('#signupForm').css({
+				"display":"block"
+			});
+		});
+	});
+
+</script>
+</head>
 <body>
 	<h1>Link your account</h1>
-	<form action="http://localhost:8080/oauth/authorize" method="post">
+	<div class = "tab">
+		<button id="loginTab">Login</button>
+		<button id = "signupTab">SignUp</button>
+	</div>
+	<form action="https://385ed79d.ngrok.io/oauth/authorize" method="post" id = "loginForm">
 		<label>Enter Employee Id</label>
-                 <input type="text" name="response_type" value="code" /> 
-                 <input type="text" name="client_id" value="clientapp" />
-                 <input type="text" name="redirect_uri" value="https://oauth-redirect.googleusercontent.com/r/jakson-voice" />
-                 <input type="text" name="scope" value="read" /> 
-                 <input type="text" name="secret" value="read" /> 
-                 <input type="text" name="scope" value="read" /> 
-                 <input type="SUBMIT" value="Get Employee info" />
+                 <input type="text" name="username" /> 
+                 <input type="password" name="password" />
+
+                 <input type="SUBMIT" value="LOGIN" />
 	
+	</form>
+	<form id = "signupForm">
+		<label>Enter Employee Id</label>
 	</form>
 </body>
 </html>
